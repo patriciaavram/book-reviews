@@ -13,9 +13,26 @@
     </header>
 
     <main>
-        <h2>Reviews - January 2026</h2>
+
+        <div class="filter-section">
+            <select id="monthFilter" onchange="filterBooks()">
+                <option value="all">All Months</option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <!-- <option value="04">April</option> -->
+            </select>
+
+            <select id="yearFilter" onchange="filterBooks()">
+                <option value="all">All Years</option>
+                <option value="2026">2026</option>
+            </select>
+        </div>
+
+
+        <!-- <h2>Reviews - January 2026</h2> -->
         <div class="book-list">
-            <div class="book-container">
+            <div class="book-container" data-month="01" data-year="2026">
                 <div class="book-card" onclick="pagechange('reviews/stationary-shop')">
                     <img src="pics/stationary-shop.jpg" alt="Letters from the Ginza Shihodo Stationery Shop Cover" class="book-cover">
                     
@@ -28,7 +45,7 @@
                 <h3 class="book-title-label">Letters from the Ginza Shihodo Stationery Shop</h3>
             </div>
 
-            <div class="book-container">
+            <div class="book-container" data-month="01" data-year="2026">
                 <div class="book-card" onclick="pagechange('reviews/sunrise-on-the-reaping')">
                     <img src="pics/sunrise-on-the-reaping.jpg" alt="Sunrise on the Reaping Cover" class="book-cover">
                     
@@ -42,9 +59,9 @@
             </div>
         </div>
 
-        <h2>Reviews - February 2026</h2>
+        <!-- <h2>Reviews - February 2026</h2> -->
         <div class="book-list">
-            <div class="book-container">
+            <div class="book-container" data-month="02" data-year="2026">
                 <div class="book-card" onclick="pagechange('reviews/1984')">
                     <img src="pics/1984.jpg" alt="1984 Cover" class="book-cover">
                     
@@ -57,7 +74,7 @@
                 <h3 class="book-title-label">1984</h3>
             </div>
 
-            <div class="book-container">
+            <div class="book-container" data-month="02" data-year="2026">
                 <div class="book-card" onclick="pagechange('reviews/girl-interrupted')">
                     <img src="pics/girl-interrupted.jpg" alt="Girl Interrupted Cover" class="book-cover">
                     
@@ -70,7 +87,7 @@
                 <h3 class="book-title-label">Girl Interrupted</h3>
             </div>
 
-            <div class="book-container">
+            <div class="book-container" data-month="02" data-year="2026">
                 <div class="book-card" onclick="pagechange('reviews/death-of-ivan-ilych')">
                     <img src="pics/death-of-ivan-ilych.jpg" alt="Death of Ivan Ilych Cover" class="book-cover">
                     
@@ -84,9 +101,9 @@
             </div>
         </div>
 
-        <h2>Reviews - March 2026</h2>
+        <!-- <h2>Reviews - March 2026</h2> -->
         <div class="book-list">
-            <div class="book-container">
+            <div class="book-container" data-month="03" data-year="2026">
                 <div class="book-card" onclick="pagechange('reviews/cannery-row')">
                     <img src="pics/cannery-row.jpg" alt="Cannery Row Cover" class="book-cover">
                     
@@ -99,7 +116,7 @@
                 <h3 class="book-title-label">Cannery Row</h3>
             </div>
 
-            <div class="book-container">
+            <div class="book-container" data-month="03" data-year="2026">
                 <div class="book-card" onclick="pagechange('reviews/yellow-wallpaper')">
                     <img src="pics/yellow-wallpaper.jpg" alt="The Yellow Wallpaper Cover" class="book-cover">
                     
@@ -112,7 +129,7 @@
                 <h3 class="book-title-label">The Yellow Wallpaper</h3>
             </div>
 
-            <div class="book-container">
+            <div class="book-container" data-month="03" data-year="2026">
                 <div class="book-card" onclick="pagechange('reviews/the-waves')">
                     <img src="pics/the-waves.jpg" alt="The Waves Cover" class="book-cover">
                     
@@ -125,7 +142,7 @@
                 <h3 class="book-title-label">The Waves</h3>
             </div>
 
-            <div class="book-container">
+            <div class="book-container" data-month="03" data-year="2026">
                 <div class="book-card" onclick="pagechange('reviews/white-oleander')">
                     <img src="pics/white-oleander.jpg" alt="White Oleander Cover" class="book-cover">
                     
@@ -138,7 +155,7 @@
                 <h3 class="book-title-label">White Oleander</h3>
             </div>
 
-            <div class="book-container">
+            <div class="book-container" data-month="03" data-year="2026">
                 <div class="book-card" onclick="pagechange('reviews/grapes-of-wrath')">
                     <img src="pics/grapes-of-wrath.jpg" alt="The Grapes of Wrath Cover" class="book-cover">
                     
@@ -151,7 +168,7 @@
                 <h3 class="book-title-label">The Grapes of Wrath</h3>
             </div>
 
-            <div class="book-container">
+            <div class="book-container" data-month="03" data-year="2026">
                 <div class="book-card" onclick="pagechange('reviews/brothers-karamazov')">
                     <img src="pics/brothers-karamazov.jpg" alt="The Brothers Karamazov Cover" class="book-cover">
                     
@@ -166,7 +183,7 @@
 
         </div>
 
-        <h2>Reviews - April 2026</h2>
+        <!-- <h2>Reviews - April 2026</h2>
         <div class="book-list">
             <div class="book-container">
                 <div class="book-card" onclick="pagechange('reviews/stationary-shop')">
@@ -180,7 +197,7 @@
                 </div>
                 <h3 class="book-title-label">Book Label</h3>
             </div>
-        </div>
+        </div> -->
 
         </div>
     </main>
