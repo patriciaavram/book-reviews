@@ -4,7 +4,6 @@ function pagechange(pagename) {
     window.location.href = pagename + ".html";
 }
 
-// Change this in your script.js
 window.filterBooks = function() {
     const selectedMonth = document.getElementById('monthFilter').value;
     const selectedYear = document.getElementById('yearFilter').value;
