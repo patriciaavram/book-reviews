@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body class="full-tbr-list"> 
+    <nav>
+        <button class="button-class" onclick="pagechange('index')">← Back Home</button>
+    </nav>
+
+    <div class="content">
+    <aside class="filter-section">
+        <h3>Filter by Status</h3>
+        <select id="statusFilter" onchange="filterTBR()">
+            <option value="all">Show All</option>
+            <option value="unread">TBR 📖</option>
+            <option value="read">Finished ✅</option>
+        </select>
+    </aside>
+
+    <main class="tbr-section">
+        <div id="tbr-list">
+            
+            <div class="tbr-item" data-status="read">
+                <img src="pics/stationary-shop.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>Letters from the Ginza Shihodo Stationery Shop</h3>
+                    <p>Kenji Ueda, Emily Balistrieri</p>
+                    <div class="status-row">
+                        <span class="status-badge status-read">Finished ✅</span>
+                        <a href="reviews/stationary-shop.html" class="review-link">Read Review</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="read">
+                <img src="pics/sunrise-on-the-reaping.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>Sunrise on the Reaping</h3>
+                    <p>Suzanne Collins</p>
+                    <div class="status-row">
+                        <span class="status-badge status-read">Finished ✅</span>
+                        <a href="reviews/sunrise-on-the-reaping.html" class="review-link">Read Review</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="read">
+                <img src="pics/1984.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>1984</h3>
+                    <p>George Orwell</p>
+                    <div class="status-row">
+                        <span class="status-badge status-read">Finished ✅</span>
+                        <a href="reviews/1984.html" class="review-link">Read Review</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="read">
+                <img src="pics/girl-interrupted.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>Girl Interrupted</h3>
+                    <p>Susanna Kaysen</p>
+                    <div class="status-row">
+                        <span class="status-badge status-read">Finished ✅</span>
+                        <a href="reviews/girl-interrupted.html" class="review-link">Read Review</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="read">
+                <img src="pics/death-of-ivan-ilych.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>The Death of Ivan Ilych</h3>
+                    <p>Leo Tolstoy</p>
+                    <div class="status-row">
+                        <span class="status-badge status-read">Finished ✅</span>
+                        <a href="reviews/death-of-ivan-ilych.html" class="review-link">Read Review</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="read">
+                <img src="pics/cannery-row.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>Cannery Row</h3>
+                    <p>John Steinbeck</p>
+                    <div class="status-row">
+                        <span class="status-badge status-read">Finished ✅</span>
+                        <a href="reviews/cannery-row.html" class="review-link">Read Review</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="read">
+                <img src="pics/yellow-wallpaper.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>The Yellow Wallpaper</h3>
+                    <p>Charlotte Perkins Gilman</p>
+                    <div class="status-row">
+                        <span class="status-badge status-read">Finished ✅</span>
+                        <a href="reviews/yellow-wallpaper.html" class="review-link">Read Review</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="read">
+                <img src="pics/the-waves.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>The Waves</h3>
+                    <p>Virginia Woolf</p>
+                    <div class="status-row">
+                        <span class="status-badge status-read">Finished ✅</span>
+                        <a href="reviews/the-waves.html" class="review-link">Read Review</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="read">
+                <img src="pics/white-oleander.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>White Oleander</h3>
+                    <p>Janet Fitch</p>
+                    <div class="status-row">
+                        <span class="status-badge status-read">Finished ✅</span>
+                        <a href="reviews/white-oleander.html" class="review-link">Read Review</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="unread">
+                <img src="pics/grapes-of-wrath.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>The Grapes of Wrath</h3>
+                    <p>John Steinbeck</p>
+                    <span class="status-badge status-tbr">TBR 📖</span>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="unread">
+                <img src="pics/brothers-karamazov.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>The Brothers Karamazov</h3>
+                    <p>Fyodor Dostoevsky</p>
+                    <span class="status-badge status-tbr">TBR 📖</span>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="unread">
+                <img src="tbr_page_book_covers/room-with-view.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>A Room with a View</h3>
+                    <p>E.M. Forster</p>
+                    <span class="status-badge status-tbr">TBR 📖</span>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="unread">
+                <img src="tbr_page_book_covers/giovannis-room.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>Giovanni's Room</h3>
+                    <p>James Baldwin</p>
+                    <span class="status-badge status-tbr">TBR 📖</span>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="unread">
+                <img src="tbr_page_book_covers/sweet-thursday.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>Sweet Thursday</h3>
+                    <p>John Steinbeck</p>
+                    <span class="status-badge status-tbr">TBR 📖</span>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="unread">
+                <img src="tbr_page_book_covers/mystere-chambre-jaune.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>Le Mystère de la Chambre Jaune</h3>
+                    <p>Gaston Leroux</p>
+                    <span class="status-badge status-tbr">TBR 📖</span>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="unread">
+                <img src="tbr_page_book_covers/sunburn.png" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>Sunburn</h3>
+                    <p>Chloe Michelle Howarth</p>
+                    <span class="status-badge status-tbr">TBR 📖</span>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="unread">
+                <img src="tbr_page_book_covers/phantom-of-the-opera.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>The Phantom of the Opera</h3>
+                    <p>Gaston Leroux</p>
+                    <span class="status-badge status-tbr">TBR 📖</span>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="unread">
+                <img src="tbr_page_book_covers/fahrenheit-451.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>Fahrenheit 451</h3>
+                    <p>Ray Bradbury</p>
+                    <span class="status-badge status-tbr">TBR 📖</span>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="unread">
+                <img src="tbr_page_book_covers/flowers-algernon.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>Flowers for Algernon</h3>
+                    <p>Daniel Keyes</p>
+                    <span class="status-badge status-tbr">TBR 📖</span>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="unread">
+                <img src="tbr_page_book_covers/la-nausee.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>La Nausée</h3>
+                    <p>Jean-Paul Sartre</p>
+                    <span class="status-badge status-tbr">TBR 📖</span>
+                </div>
+            </div>
+
+            <div class="tbr-item" data-status="unread">
+                <img src="tbr_page_book_covers/east-of-eden.jpg" alt="Book Cover" class="tbr-cover">
+                <div class="tbr-info">
+                    <h3>East of Eden</h3>
+                    <p>John Steinbeck</p>
+                    <span class="status-badge status-tbr">TBR 📖</span>
+                </div>
+            </div>
+
+            </div>
+    </main>
+</div>
+
+</body>
