@@ -136,7 +136,6 @@ img {
     border-radius: 15px; 
     backdrop-filter: blur(5px); 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    color: #333; 
 }
 
 .review-section {
@@ -149,20 +148,20 @@ img {
 /* Filter Section Styles */
 .filter-section {
     width: 180px;
-    min-width: 120px;
     display: flex;
     flex-direction: column;
-    background-image: url('pics/review-bg-pic.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    padding: 20px;
-    border-radius: 8px;
+    
+    position: sticky; 
+    top: 60%;
+    transform: translateY(-50%);
+    padding: 20px; 
+    padding-bottom: 40px;
     height: fit-content;
+    z-index: 100;
 }
 
 .filter-section select {
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 .filter-section select:focus {
