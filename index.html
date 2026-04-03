@@ -16,7 +16,7 @@
             <div class="filter-section">
                 <select id="monthFilter" onchange="filterBooks()">
                     <option value="all">All Months</option>
-                    <!-- <option value="04">April</option> -->
+                    <option value="04">April</option>
                     <option value="03">March</option>
                     <option value="02">February</option>
                     <option value="01">January</option>
@@ -179,7 +179,7 @@
                             
                             <div class="book-overlay">
                                 <p class="overlay-author">John Steinbeck</p>
-                                <div class="stars">★★★★⯪</div>
+                                <div class="stars">★★★★★</div>
                                 <p class="view-text">Read Review</p>
                             </div>
                         </div>
@@ -201,21 +201,36 @@
 
                 </div>
 
-                <!-- <h2>Reviews - April 2026</h2>
+                <!-- <h2>Reviews - April 2026</h2> -->
                 <div class="book-list">
-                    <div class="book-container">
-                        <div class="book-card" onclick="pagechange('reviews/stationary-shop')">
-                            <img src="pics/stationary-shop.jpg" alt="Book Title" class="book-cover">
+                    <div class="book-container" data-month="04" data-year="2026">
+                        <div class="book-card" onclick="pagechange('reviews/lheure-zero')">
+                            <img src="pics/lheure-zero.jpg" alt="L'Heure Zéro Cover" class="book-cover">
                             
                             <div class="book-overlay">
-                                <p class="overlay-author">Author Name</p>
-                                <div class="stars">★★★★⯪</div>
+                                <p class="overlay-author">Agatha Christie</p>
+                                <div class="stars"></div>
                                 <p class="view-text">Read Review</p>
                             </div>
                         </div>
-                        <h3 class="book-title-label">Book Label</h3>
+                        <h3 class="book-title-label">L'Heure Zéro</h3>
                     </div>
-                </div> -->
+
+                    <div class="book-container" data-month="04" data-year="2026">
+                        <div class="book-card" onclick="pagechange('reviews/notes-from-underground')">
+                            <img src="pics/notes-from-underground.jpg" alt="Notes from Underground Cover" class="book-cover">
+                            
+                            <div class="book-overlay">
+                                <p class="overlay-author">Fyodor Dostoyevsky</p>
+                                <div class="stars"></div>
+                                <p class="view-text">Read Review</p>
+                            </div>
+                        </div>
+                        <h3 class="book-title-label">Notes from Underground</h3>
+                    </div>
+
+
+                </div>
             </div>
         </div>
     </main>
