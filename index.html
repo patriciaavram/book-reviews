@@ -16,6 +16,7 @@
             <div class="filter-section">
                 <select id="monthFilter" onchange="filterBooks()">
                     <option value="all">All Months</option>
+                    <option value="05">May</option>
                     <option value="04">April</option>
                     <option value="03">March</option>
                     <option value="02">February</option>
@@ -306,9 +307,35 @@
                         </div>
                         <h3 class="book-title-label">Notes from Underground</h3>
                     </div> -->
-
-
                 </div>
+
+                <!-- <h2>Reviews - May 2026</h2> -->
+                <div class="book-list">
+                    <div class="book-container" data-month="05" data-year="2026">
+                        <div class="book-card" onclick="pagechange('reviews/good-girl-guide-to-murder')">
+                            <img src="tbr_page_book_covers/good-girl-guide-to-murder.jpg" alt="GGGTM Cover" class="book-cover">
+                            
+                            <div class="book-overlay">
+                                <p class="overlay-author">Holly Jackson</p>
+                                <div class="stars">★★★★☆</div>
+                                <p class="view-text">Read Review</p>
+                            </div>
+                        </div>
+                        <h3 class="book-title-label">A Good Girl's Guide to Murder</h3>
+                    </div>
+
+                    <div class="book-container" data-month="05" data-year="2026">
+                        <div class="book-card" onclick="pagechange('reviews/midnight-library')">
+                            <img src="tbr_page_book_covers/midnight-library.jpg" alt="The Midnight Library Cover" class="book-cover">
+                            
+                            <div class="book-overlay">
+                                <p class="overlay-author">Matt Haig</p>
+                                <div class="stars"></div>
+                                <p class="view-text">Read Review</p>
+                            </div>
+                        </div>
+                        <h3 class="book-title-label">The Midnight Library</h3>
+                    </div>
             </div>
         </div>
     </main>
