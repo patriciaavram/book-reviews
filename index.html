@@ -16,6 +16,7 @@
             <div class="filter-section">
                 <select id="monthFilter" onchange="filterBooks()">
                     <option value="all">All Months</option>
+                    <option value="06">June</option>
                     <option value="05">May</option>
                     <option value="04">April</option>
                     <option value="03">March</option>
@@ -28,17 +29,15 @@
                     <option value="2026">2026</option>
                 </select>
                 <div class="tbr-section">
-                    <h3>Top 10 Next TBR Books</h3>
+                    <h3>Next TBR Books</h3>
                     <ol class="top10-tbr-list">
-                        <li>Fahrenheit 451</li>
-                        <li>Artemis</li>
-                        <li>Flowers for Algernon</li>
+                        <li>The Trial</li>
+                        <li>Dubliners</li>
+                        <li>Animal</li>
                         <li>The Phantom of the Opera</li>
                         <li>East of Eden</li>
-                        <li>Good Girl Bad Blood</li>
                         <li>All The Light We Cannot See</li>
                         <li>The Kite Runner</li>
-                        <li>Sweet Thursday</li>
                         <li>Le Mystère de la Chambre Jaune</li>
                     </ol>
                     <button class="button-class" onclick="pagechange('tbr_page')">See Full Library</button>
@@ -392,17 +391,62 @@
                     <div class="book-container" data-month="05" data-year="2026">
                         <div class="book-card" onclick="pagechange('reviews/good-girl-bad-blood')">
                             <img src="tbr_page_book_covers/good-girl-bad-blood.jpg" alt="Good Girl Bad Blood Cover" class="book-cover">
-                            
+
                             <div class="book-overlay">
                                 <p class="overlay-author">Holly Jackson</p>
-                                <div class="stars"></div>
+                                <div class="stars">★★★★☆</div>
                                 <p class="view-text">Read Review</p>
                             </div>
                         </div>
                         <h3 class="book-title-label">Good Girl Bad Blood</h3>
                     </div>
+                </div>
+                
+                <!-- <h2>Reviews - June 2026</h2> -->
+                <div class="book-list">
+                    <div class="book-container" data-month="06" data-year="2026">
+                        <div class="book-card" onclick="pagechange('reviews/flowers-algernon')">
+                            <img src="tbr_page_book_covers/flowers-algernon.jpg" alt="Flowers for Algernon Cover" class="book-cover">
+                            
+                            <div class="book-overlay">
+                                <p class="overlay-author">Daniel Keyes</p>
+                                <div class="stars">★★★★★</div>
+                                <p class="view-text">Read Review</p>
+                            </div>
+                        </div>
+                        <h3 class="book-title-label">Flowers for Algernon</h3>
+                    </div>
+
+                    <div class="book-container" data-month="06" data-year="2026">
+                        <div class="book-card" onclick="pagechange('reviews/as-good-as-dead')">
+                            <img src="tbr_page_book_covers/as-good-as-dead.jpg" alt="As Good As Dead Cover" class="book-cover">
+                            
+                            <div class="book-overlay">
+                                <p class="overlay-author">Holly Jackson</p>
+                                <div class="stars">★★★★☆</div>
+                                <p class="view-text">Read Review</p>
+                            </div>
+                        </div>
+                        <h3 class="book-title-label">As Good As Dead</h3>
+                    </div>
+
+                    <div class="book-container" data-month="06" data-year="2026">
+                        <div class="book-card" onclick="pagechange('reviews/animal')">
+                            <img src="tbr_page_book_covers/animal.jpg" alt="Animal Cover" class="book-cover">
+                            
+                            <div class="book-overlay">
+                                <p class="overlay-author">Lisa Taddeo</p>
+                                <div class="stars">★★☆☆☆</div>
+                                <p class="view-text">Read Review</p>
+                            </div>
+                        </div>
+                        <h3 class="book-title-label">Animal</h3>
+                    </div>
+                </div>
+
+                    
+                </div>
             </div>
-        </div>
     </main>
 </body>
 </html>
