@@ -52,3 +52,46 @@ function filterTBR() {
         }
     });
 }
+
+// Function for filtering based on rating 
+window.updateBooks = function() {
+    const selectedMonth = document.getElementById('monthFilter').value;
+    const selectedYear = document.getElementById('yearFilter').value;
+    const sortValue = document.getElementById('sortFilter').value;
+    
+    const books = Array.from(document.querySelectorAll('.book-container'));
+    const mainList = document.querySelector('.book-list'); // Targets the first book-list
+
+    // 1. Sort the array of books mathematically
+    books.sort((a, b) => {
+        if (sortValue === 'rating') {
+            const ratingA = parseFloat(a.getAttribute('data-rating')) || 0;
+            const ratingB = parseFloat(b.getAttribute('data-rating')) || 0;
+            return ratingB - ratingA; // Descending: Highest rated first
+        } else {
+            const indexA = parseInt(a.getAttribute('data-index')) || 0;
+            const indexB = parseInt(b.getAttribute('data-index')) || 0;
+            return indexB - indexA; // Descending order (highest index/newest read first)
+        }
+    });
+
+    // 2. Apply sorting and filtering
+    books.forEach(book => {
+        mainList.appendChild(book); 
+
+        const bookMonth = book.getAttribute('data-month');
+        const bookYear = book.getAttribute('data-year');
+        const monthMatch = (selectedMonth === "all" || selectedMonth === bookMonth);
+        const yearMatch = (selectedYear === "all" || selectedYear === bookYear);
+
+        book.style.display = (monthMatch && yearMatch) ? "" : "none";
+    });
+
+    // 3. Hide any empty lists
+    document.querySelectorAll('.book-list').forEach(list => {
+        const visibleBooks = Array.from(list.querySelectorAll('.book-container'))
+                                  .filter(book => book.style.display !== "none");
+        
+        list.style.display = visibleBooks.length === 0 ? "none" : "grid";
+    });
+}

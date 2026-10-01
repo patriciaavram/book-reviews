@@ -32,6 +32,12 @@
                     <option value="all">All Years</option>
                     <option value="2026">2026</option>
                 </select>
+
+                <select id="sortFilter" onchange="updateBooks()">
+                    <option value="time">Sort: Newest First</option>
+                    <option value="rating">Sort: Highest Rated</option>
+                </select>
+                
                 <div class="tbr-section">
                     <h3>Next TBR Books</h3>
                     <ol class="top10-tbr-list">
@@ -52,7 +58,7 @@
 
                 <!-- <h2>Reviews - October 2026</h2> -->
                 <div class="book-list">
-                    <!-- <div class="book-container" data-month="09" data-year="2026">
+                    <!-- <div class="book-container" data-month="09" data-year="2026" data-rating="">
                         <div class="book-card" onclick="pagechange('reviews/the-institute')">
                             <img src="tbr_page_book_covers/the-institute.jpg" alt="The Institute Cover" class="book-cover">
                             
@@ -65,7 +71,7 @@
                         <h3 class="book-title-label">The Institute</h3>
                     </div> -->
 
-                    <!-- <div class="book-container" data-month="09" data-year="2026">
+                    <!-- <div class="book-container" data-month="09" data-year="2026" data-rating="">
                         <div class="book-card" onclick="pagechange('reviews/self-portrait')">
                             <img src="tbr_page_book_covers/self-portrait.jpg" alt="Self-Portrait Cover" class="book-cover">
                             
@@ -77,11 +83,8 @@
                         </div>
                         <h3 class="book-title-label">Self-Portrait</h3>
                     </div> -->
-                </div>
 
-                <!-- <h2>Reviews - September 2026</h2> -->
-                <div class="book-list">
-                    <div class="book-container" data-month="09" data-year="2026">
+                    <!-- <div class="book-container" data-month="09" data-year="2026" data-rating="">
                         <div class="book-card" onclick="pagechange('reviews/legendborn')">
                             <img src="tbr_page_book_covers/legendborn.jpg" alt="Legendborn Cover" class="book-cover">
                             
@@ -92,9 +95,25 @@
                             </div>
                         </div>
                         <h3 class="book-title-label">Legendborn</h3>
+                    </div> -->
+                </div>
+
+                <!-- <h2>Reviews - September 2026</h2> -->
+                <div class="book-list">
+                    <div class="book-container" data-month="09" data-year="2026" data-rating="" data-index="44">
+                        <div class="book-card" onclick="pagechange('reviews/this-is-how-you-lose-the-time-war')">
+                            <img src="tbr_page_book_covers/this-is-how-you-lose-the-time-war.jpg" alt="This Is How You Lose the Time War Cover" class="book-cover">
+                            
+                            <div class="book-overlay">
+                                <p class="overlay-author">Amal El-Mohta</p>
+                                <div class="stars"></div>
+                                <p class="view-text">Read Review</p>
+                            </div>
+                        </div>
+                        <h3 class="book-title-label">This Is How You Lose the Time War</h3>
                     </div>
 
-                    <div class="book-container" data-month="09" data-year="2026">
+                    <div class="book-container" data-month="09" data-year="2026" data-rating="5.0" data-index="43">
                         <div class="book-card" onclick="pagechange('reviews/foster')">
                             <img src="tbr_page_book_covers/foster.jpg" alt="Foster Cover" class="book-cover">
                             
@@ -107,7 +126,7 @@
                         <h3 class="book-title-label">Foster</h3>
                     </div>
 
-                    <div class="book-container" data-month="09" data-year="2026">
+                    <div class="book-container" data-month="09" data-year="2026" data-rating="3.0" data-index="42">
                         <div class="book-card" onclick="pagechange('reviews/earthlings')">
                             <img src="tbr_page_book_covers/earthlings.jpg" alt="Earthlings Cover" class="book-cover">
                             
@@ -120,7 +139,7 @@
                         <h3 class="book-title-label">Earthlings</h3>
                     </div>
 
-                    <div class="book-container" data-month="09" data-year="2026">
+                    <div class="book-container" data-month="09" data-year="2026" data-rating="4.5" data-index="41">
                         <div class="book-card" onclick="pagechange('reviews/turtles-all-the-way-down')">
                             <img src="tbr_page_book_covers/turtles-all-the-way-down.jpg" alt="Turtles All The Way Down Cover" class="book-cover">
                             
@@ -133,7 +152,7 @@
                         <h3 class="book-title-label">Turtles All The Way Down</h3>
                     </div>
 
-                    <div class="book-container" data-month="09" data-year="2026">
+                    <div class="book-container" data-month="09" data-year="2026" data-rating="4.0" data-index="40">
                         <div class="book-card" onclick="pagechange('reviews/the-braid')">
                             <img src="tbr_page_book_covers/the-braid.jpg" alt="The Braid Cover" class="book-cover">
                             
@@ -146,7 +165,7 @@
                         <h3 class="book-title-label">The Braid</h3>
                     </div>
 
-                    <div class="book-container" data-month="09" data-year="2026">
+                    <div class="book-container" data-month="09" data-year="2026" data-rating="4.5" data-index="39">
                         <div class="book-card" onclick="pagechange('reviews/the-capital-of-dreams')">
                             <img src="tbr_page_book_covers/the-capital-of-dreams.jpg" alt="The Capital of Dreams Cover" class="book-cover">
                             
@@ -163,7 +182,7 @@
 
                 <!-- <h2>Reviews - August 2026</h2> -->
                 <div class="book-list">
-                    <div class="book-container" data-month="08" data-year="2026">
+                    <div class="book-container" data-month="08" data-year="2026" data-rating="5.0" data-index="38">
                         <div class="book-card" onclick="pagechange('reviews/everything-is-tuberculosis')">
                             <img src="tbr_page_book_covers/everything-is-tuberculosis.jpg" alt="Everything Is Tuberculosis Cover" class="book-cover">
                             
@@ -176,7 +195,7 @@
                         <h3 class="book-title-label">Everything Is Tuberculosis</h3>
                     </div>
 
-                    <div class="book-container" data-month="08" data-year="2026">
+                    <div class="book-container" data-month="08" data-year="2026" data-rating="3.0" data-index="37">
                         <div class="book-card" onclick="pagechange('reviews/chlorine')">
                             <img src="tbr_page_book_covers/chlorine.jpg" alt="Chlorine Cover" class="book-cover">
                             
@@ -189,7 +208,7 @@
                         <h3 class="book-title-label">Chlorine</h3>
                     </div>
 
-                    <div class="book-container" data-month="08" data-year="2026">
+                    <div class="book-container" data-month="08" data-year="2026" data-rating="4.5" data-index="36">
                         <div class="book-card" onclick="pagechange('reviews/no-longer-human')">
                             <img src="tbr_page_book_covers/no-longer-human.jpg" alt="No Longer Human Cover" class="book-cover">
                             
@@ -202,7 +221,7 @@
                         <h3 class="book-title-label">No Longer Human</h3>
                     </div>
 
-                    <div class="book-container" data-month="08" data-year="2026">
+                    <div class="book-container" data-month="08" data-year="2026" data-rating="4.5" data-index="35">
                         <div class="book-card" onclick="pagechange('reviews/a-man-called-ove')">
                             <img src="tbr_page_book_covers/a-man-called-ove.jpg" alt="A Man Called Ove Cover" class="book-cover">
                             
@@ -218,7 +237,7 @@
 
                 <!-- <h2>Reviews - July 2026</h2> -->
                 <div class="book-list">
-                    <div class="book-container" data-month="07" data-year="2026">
+                    <div class="book-container" data-month="07" data-year="2026" data-rating="5.0" data-index="34">
                         <div class="book-card" onclick="pagechange('reviews/all-boys-arent-blue')">
                             <img src="tbr_page_book_covers/all-boys-arent-blue.jpg" alt="All Boys Aren't Blue Cover" class="book-cover">
                             
@@ -231,7 +250,7 @@
                         <h3 class="book-title-label">All Boys Aren't Blue</h3>
                     </div>
 
-                    <div class="book-container" data-month="07" data-year="2026">
+                    <div class="book-container" data-month="07" data-year="2026" data-rating="3.0" data-index="33">
                         <div class="book-card" onclick="pagechange('reviews/tender-is-the-flesh')">
                             <img src="tbr_page_book_covers/tender-is-the-flesh.jpg" alt="Tender Is The Flesh Cover" class="book-cover">
                             
@@ -244,7 +263,7 @@
                         <h3 class="book-title-label">Tender Is The Flesh</h3>
                     </div>
 
-                    <div class="book-container" data-month="07" data-year="2026">
+                    <div class="book-container" data-month="07" data-year="2026" data-rating="4.0" data-index="32">
                         <div class="book-card" onclick="pagechange('reviews/my-policeman')">
                             <img src="tbr_page_book_covers/my-policeman.jpg" alt="My Policeman Cover" class="book-cover">
                             
@@ -257,7 +276,7 @@
                         <h3 class="book-title-label">My Policeman</h3>
                     </div>
 
-                    <div class="book-container" data-month="07" data-year="2026">
+                    <div class="book-container" data-month="07" data-year="2026" data-rating="4.0" data-index="31">
                         <div class="book-card" onclick="pagechange('reviews/pick-a-color')">
                             <img src="tbr_page_book_covers/pick-a-color.jpg" alt="Pick A Color Cover" class="book-cover">
                             
@@ -273,7 +292,7 @@
 
                 <!-- <h2>Reviews - June 2026</h2> -->
                 <div class="book-list">
-                    <div class="book-container" data-month="06" data-year="2026">
+                    <div class="book-container" data-month="06" data-year="2026" data-rating="5.0" data-index="30">
                         <div class="book-card" onclick="pagechange('reviews/flowers-algernon')">
                             <img src="tbr_page_book_covers/flowers-algernon.jpg" alt="Flowers for Algernon Cover" class="book-cover">
                             
@@ -286,7 +305,7 @@
                         <h3 class="book-title-label">Flowers for Algernon</h3>
                     </div>
 
-                    <div class="book-container" data-month="06" data-year="2026">
+                    <div class="book-container" data-month="06" data-year="2026" data-rating="3.5" data-index="29">
                         <div class="book-card" onclick="pagechange('reviews/as-good-as-dead')">
                             <img src="tbr_page_book_covers/as-good-as-dead.jpg" alt="As Good As Dead Cover" class="book-cover">
                             
@@ -299,7 +318,7 @@
                         <h3 class="book-title-label">As Good As Dead</h3>
                     </div>
 
-                    <div class="book-container" data-month="06" data-year="2026">
+                    <div class="book-container" data-month="06" data-year="2026" data-rating="1.5" data-index="28">
                         <div class="book-card" onclick="pagechange('reviews/animal')">
                             <img src="tbr_page_book_covers/animal.jpg" alt="Animal Cover" class="book-cover">
                             
@@ -312,7 +331,7 @@
                         <h3 class="book-title-label">Animal</h3>
                     </div>
 
-                    <div class="book-container" data-month="06" data-year="2026">
+                    <div class="book-container" data-month="06" data-year="2026" data-rating="2.0" data-index="27">
                         <div class="book-card" onclick="pagechange('reviews/the-trial')">
                             <img src="tbr_page_book_covers/the-trial.jpg" alt="The Trial Cover" class="book-cover">
                             
@@ -325,7 +344,7 @@
                         <h3 class="book-title-label">The Trial</h3>
                     </div>
 
-                    <div class="book-container" data-month="06" data-year="2026">
+                    <div class="book-container" data-month="06" data-year="2026" data-rating="4.0" data-index="26">
                         <div class="book-card" onclick="pagechange('reviews/five-people-in-heaven')">
                             <img src="tbr_page_book_covers/five-people-in-heaven.jpg" alt="The Five People You Meet in Heaven Cover" class="book-cover">
                             
@@ -338,7 +357,7 @@
                         <h3 class="book-title-label">The Five People You Meet in Heaven</h3>
                     </div>
 
-                    <div class="book-container" data-month="06" data-year="2026">
+                    <div class="book-container" data-month="06" data-year="2026" data-rating="4.0" data-index="25">
                         <div class="book-card" onclick="pagechange('reviews/for-one-more-day')">
                             <img src="tbr_page_book_covers/for-one-more-day.jpg" alt="For One More Day Cover" class="book-cover">
                             
@@ -354,7 +373,7 @@
 
                 <!-- <h2>Reviews - May 2026</h2> -->
                 <div class="book-list">
-                    <div class="book-container" data-month="05" data-year="2026">
+                    <div class="book-container" data-month="05" data-year="2026" data-rating="4.0" data-index="24">
                         <div class="book-card" onclick="pagechange('reviews/good-girl-guide-to-murder')">
                             <img src="tbr_page_book_covers/good-girl-guide-to-murder.jpg" alt="GGGTM Cover" class="book-cover">
                             
@@ -367,7 +386,7 @@
                         <h3 class="book-title-label">A Good Girl's Guide to Murder</h3>
                     </div>
 
-                    <div class="book-container" data-month="05" data-year="2026">
+                    <div class="book-container" data-month="05" data-year="2026" data-rating="2.5" data-index="23">
                         <div class="book-card" onclick="pagechange('reviews/midnight-library')">
                             <img src="tbr_page_book_covers/midnight-library.jpg" alt="The Midnight Library Cover" class="book-cover">
                             
@@ -380,7 +399,7 @@
                         <h3 class="book-title-label">The Midnight Library</h3>
                     </div>
 
-                    <div class="book-container" data-month="05" data-year="2026">
+                    <div class="book-container" data-month="05" data-year="2026" data-rating="4.0" data-index="22">
                         <div class="book-card" onclick="pagechange('reviews/project-hail-mary')">
                             <img src="tbr_page_book_covers/project-hail-mary.jpg" alt="Project Hail Mary Cover" class="book-cover">
                             
@@ -393,7 +412,7 @@
                         <h3 class="book-title-label">Project Hail Mary</h3>
                     </div>
 
-                    <div class="book-container" data-month="05" data-year="2026">
+                    <div class="book-container" data-month="05" data-year="2026" data-rating="3.5" data-index="21">
                         <div class="book-card" onclick="pagechange('reviews/yellowface')">
                             <img src="tbr_page_book_covers/yellowface.jpg" alt="Yellowface Cover" class="book-cover">
                             
@@ -406,7 +425,7 @@
                         <h3 class="book-title-label">Yellowface</h3>
                     </div>
 
-                    <div class="book-container" data-month="05" data-year="2026">
+                    <div class="book-container" data-month="05" data-year="2026" data-rating="4.0" data-index="20">
                         <div class="book-card" onclick="pagechange('reviews/fahrenheit-451')">
                             <img src="tbr_page_book_covers/fahrenheit-451.jpg" alt="Fahrenheit 451 Cover" class="book-cover">
                             
@@ -419,7 +438,7 @@
                         <h3 class="book-title-label">Fahrenheit 451</h3>
                     </div>
 
-                    <div class="book-container" data-month="05" data-year="2026">
+                    <div class="book-container" data-month="05" data-year="2026" data-rating="0" data-index="19">
                         <div class="book-card" onclick="pagechange('reviews/artemis')">
                             <img src="tbr_page_book_covers/artemis.jpg" alt="Artemis Cover" class="book-cover">
                             
@@ -432,7 +451,7 @@
                         <h3 class="book-title-label">Artemis</h3>
                     </div>
 
-                    <div class="book-container" data-month="05" data-year="2026">
+                    <div class="book-container" data-month="05" data-year="2026" data-rating="4.0" data-index="18">
                         <div class="book-card" onclick="pagechange('reviews/good-girl-bad-blood')">
                             <img src="tbr_page_book_covers/good-girl-bad-blood.jpg" alt="Good Girl Bad Blood Cover" class="book-cover">
 
@@ -448,7 +467,7 @@
 
                 <!-- <h2>Reviews - April 2026</h2> -->
                 <div class="book-list">
-                    <div class="book-container" data-month="04" data-year="2026">
+                    <div class="book-container" data-month="04" data-year="2026" data-rating="4.0" data-index="17">
                         <div class="book-card" onclick="pagechange('reviews/lheure-zero')">
                             <img src="pics/lheure-zero.jpg" alt="L'Heure Zéro Cover" class="book-cover">
                             
@@ -461,7 +480,7 @@
                         <h3 class="book-title-label">L'Heure Zéro</h3>
                     </div>
 
-                    <div class="book-container" data-month="04" data-year="2026">
+                    <div class="book-container" data-month="04" data-year="2026" data-rating="4.5" data-index="16">
                         <div class="book-card" onclick="pagechange('reviews/man')">
                             <img src="pics/man.jpg" alt="Mãn Cover" class="book-cover">
                             
@@ -474,7 +493,7 @@
                         <h3 class="book-title-label">Mãn</h3>
                     </div>
 
-                    <div class="book-container" data-month="04" data-year="2026">
+                    <div class="book-container" data-month="04" data-year="2026" data-rating="3.0" data-index="15">
                         <div class="book-card" onclick="pagechange('reviews/room-with-a-view')">
                             <img src="tbr_page_book_covers\room-with-view.jpg" alt="Room with a View Cover" class="book-cover">
                             
@@ -487,7 +506,7 @@
                         <h3 class="book-title-label">A Room with a View</h3>
                     </div>
 
-                    <div class="book-container" data-month="04" data-year="2026">
+                    <div class="book-container" data-month="04" data-year="2026" data-rating="5.0" data-index="14">
                         <div class="book-card" onclick="pagechange('reviews/anne-of-green-gables')">
                             <img src="pics/anne-of-green-gables.jpg" alt="Anne of Green Gables Cover" class="book-cover">
                             
@@ -500,7 +519,7 @@
                         <h3 class="book-title-label">Anne of Green Gables</h3>
                     </div>
 
-                    <div class="book-container" data-month="04" data-year="2026">
+                    <div class="book-container" data-month="04" data-year="2026" data-rating="4.5" data-index="13">
                         <div class="book-card" onclick="pagechange('reviews/seven-days-in-june')">
                             <img src="pics/seven-days-in-june.jpg" alt="Seven Days in June Cover" class="book-cover">
                             
@@ -513,7 +532,7 @@
                         <h3 class="book-title-label">Seven Days in June</h3>
                     </div>
 
-                    <div class="book-container" data-month="04" data-year="2026">
+                    <div class="book-container" data-month="04" data-year="2026" data-rating="4.0" data-index="12">
                         <div class="book-card" onclick="pagechange('reviews/sunburn')">
                             <img src="tbr_page_book_covers/sunburn.png" alt="Sunburn Cover" class="book-cover">
                             
@@ -526,7 +545,7 @@
                         <h3 class="book-title-label">Sunburn</h3>
                     </div>
 
-                    <div class="book-container" data-month="04" data-year="2026">
+                    <div class="book-container" data-month="04" data-year="2026" data-rating="4.5" data-index="11">
                         <div class="book-card" onclick="pagechange('reviews/giovannis-room')">
                             <img src="tbr_page_book_covers/giovannis-room.jpg" alt="Giovanni's Room Cover" class="book-cover">
                             
@@ -538,24 +557,11 @@
                         </div>
                         <h3 class="book-title-label">Giovanni's Room</h3>
                     </div>
-
-                    <!-- <div class="book-container" data-month="04" data-year="2026">
-                        <div class="book-card" onclick="pagechange('reviews/notes-from-underground')">
-                            <img src="pics/notes-from-underground.jpg" alt="Notes from Underground Cover" class="book-cover">
-                            
-                            <div class="book-overlay">
-                                <p class="overlay-author">Fyodor Dostoyevsky</p>
-                                <div class="stars"></div>
-                                <p class="view-text">Read Review</p>
-                            </div>
-                        </div>
-                        <h3 class="book-title-label">Notes from Underground</h3>
-                    </div> -->
                 </div>
 
                 <!-- <h2>Reviews - March 2026</h2> -->
                 <div class="book-list">
-                    <div class="book-container" data-month="03" data-year="2026">
+                    <div class="book-container" data-month="03" data-year="2026" data-rating="4.5" data-index="10">
                         <div class="book-card" onclick="pagechange('reviews/cannery-row')">
                             <img src="pics/cannery-row.jpg" alt="Cannery Row Cover" class="book-cover">
                             
@@ -568,7 +574,7 @@
                         <h3 class="book-title-label">Cannery Row</h3>
                     </div>
 
-                    <div class="book-container" data-month="03" data-year="2026">
+                    <div class="book-container" data-month="03" data-year="2026" data-rating="4.5" data-index="9">
                         <div class="book-card" onclick="pagechange('reviews/yellow-wallpaper')">
                             <img src="pics/yellow-wallpaper.jpg" alt="The Yellow Wallpaper Cover" class="book-cover">
                             
@@ -581,7 +587,7 @@
                         <h3 class="book-title-label">The Yellow Wallpaper</h3>
                     </div>
 
-                    <div class="book-container" data-month="03" data-year="2026">
+                    <div class="book-container" data-month="03" data-year="2026" data-rating="3.5" data-index="8">
                         <div class="book-card" onclick="pagechange('reviews/the-waves')">
                             <img src="pics/the-waves.jpg" alt="The Waves Cover" class="book-cover">
                             
@@ -594,7 +600,7 @@
                         <h3 class="book-title-label">The Waves</h3>
                     </div>
 
-                    <div class="book-container" data-month="03" data-year="2026">
+                    <div class="book-container" data-month="03" data-year="2026" data-rating="4.5" data-index="7">
                         <div class="book-card" onclick="pagechange('reviews/white-oleander')">
                             <img src="pics/white-oleander.jpg" alt="White Oleander Cover" class="book-cover">
                             
@@ -607,7 +613,7 @@
                         <h3 class="book-title-label">White Oleander</h3>
                     </div>
 
-                    <div class="book-container" data-month="03" data-year="2026">
+                    <div class="book-container" data-month="03" data-year="2026" data-rating="5.0" data-index="6">
                         <div class="book-card" onclick="pagechange('reviews/grapes-of-wrath')">
                             <img src="pics/grapes-of-wrath.jpg" alt="The Grapes of Wrath Cover" class="book-cover">
                             
@@ -619,25 +625,11 @@
                         </div>
                         <h3 class="book-title-label">The Grapes of Wrath</h3>
                     </div>
-
-                    <!-- <div class="book-container" data-month="03" data-year="2026">
-                        <div class="book-card" onclick="pagechange('reviews/brothers-karamazov')">
-                            <img src="pics/brothers-karamazov.jpg" alt="The Brothers Karamazov Cover" class="book-cover">
-                            
-                            <div class="book-overlay">
-                                <p class="overlay-author">Fyodor Dostoevsky</p>
-                                <div class="stars">★★★★☆</div>
-                                <p class="view-text">Read Review</p>
-                            </div>
-                        </div>
-                        <h3 class="book-title-label">The Brothers Karamazov</h3>
-                    </div> -->
-
                 </div>
 
                 <!-- <h2>Reviews - February 2026</h2> -->
                 <div class="book-list">
-                    <div class="book-container" data-month="02" data-year="2026">
+                    <div class="book-container" data-month="02" data-year="2026" data-rating="3.5" data-index="5">
                         <div class="book-card" onclick="pagechange('reviews/1984')">
                             <img src="pics/1984.jpg" alt="1984 Cover" class="book-cover">
                             
@@ -650,7 +642,7 @@
                         <h3 class="book-title-label">1984</h3>
                     </div>
 
-                    <div class="book-container" data-month="02" data-year="2026">
+                    <div class="book-container" data-month="02" data-year="2026" data-rating="4.0" data-index="4">
                         <div class="book-card" onclick="pagechange('reviews/girl-interrupted')">
                             <img src="pics/girl-interrupted.jpg" alt="Girl Interrupted Cover" class="book-cover">
                             
@@ -663,7 +655,7 @@
                         <h3 class="book-title-label">Girl Interrupted</h3>
                     </div>
 
-                    <div class="book-container" data-month="02" data-year="2026">
+                    <div class="book-container" data-month="02" data-year="2026" data-rating="5.0" data-index="3">
                         <div class="book-card" onclick="pagechange('reviews/death-of-ivan-ilych')">
                             <img src="pics/death-of-ivan-ilych.jpg" alt="Death of Ivan Ilych Cover" class="book-cover">
                             
@@ -679,7 +671,7 @@
 
                 <!-- <h2>Reviews - January 2026</h2> -->
                 <div class="book-list">
-                    <div class="book-container" data-month="01" data-year="2026">
+                    <div class="book-container" data-month="01" data-year="2026" data-rating="3.0" data-index="2">
                         <div class="book-card" onclick="pagechange('reviews/stationary-shop')">
                             <img src="pics/stationary-shop.jpg" alt="Letters from the Ginza Shihodo Stationery Shop Cover" class="book-cover">
                             
@@ -692,7 +684,7 @@
                         <h3 class="book-title-label">Letters from the Ginza Shihodo Stationery Shop</h3>
                     </div>
 
-                    <div class="book-container" data-month="01" data-year="2026">
+                    <div class="book-container" data-month="01" data-year="2026" data-rating="4.5" data-index="1">
                         <div class="book-card" onclick="pagechange('reviews/sunrise-on-the-reaping')">
                             <img src="pics/sunrise-on-the-reaping.jpg" alt="Sunrise on the Reaping Cover" class="book-cover">
                             
