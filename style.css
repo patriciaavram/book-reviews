@@ -30,6 +30,13 @@ img {
     transition: background-color 0.3s ease;
 }
 
+.sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
 .review-nav {
     display: flex;
     justify-content: space-between;
@@ -277,4 +284,61 @@ img {
     background-color: #fff3cd;
     color: #856404;
     border: 1px solid #ffeeba;
+}
+
+/* =========================================
+   Recommendations Page Styles
+========================================= */
+
+.rec-category {
+    margin-bottom: 50px;
+}
+
+.featured-rec {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 30px;
+    margin-top: 25px;
+   
+    background: rgba(255, 255, 255, 0.6); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.rec-text {
+    flex: 1;
+    text-align: left;
+}
+
+.rec-text h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.rec-author {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.rec-blurb {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #141c24;
+}
+
+@media (max-width: 650px) {
+    .featured-rec {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .rec-text {
+        text-align: center; 
+    }
 }
