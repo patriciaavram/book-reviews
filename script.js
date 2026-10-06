@@ -58,20 +58,21 @@ window.updateBooks = function() {
     const selectedMonth = document.getElementById('monthFilter').value;
     const selectedYear = document.getElementById('yearFilter').value;
     const sortValue = document.getElementById('sortFilter').value;
+    const selectedGenre = document.getElementById('genreFilter').value; 
     
     const books = Array.from(document.querySelectorAll('.book-container'));
-    const mainList = document.querySelector('.book-list'); // Targets the first book-list
+    const mainList = document.querySelector('.book-list'); 
 
-    // 1. Sort the array of books mathematically
+    // 1. Sort the array of books
     books.sort((a, b) => {
         if (sortValue === 'rating') {
             const ratingA = parseFloat(a.getAttribute('data-rating')) || 0;
             const ratingB = parseFloat(b.getAttribute('data-rating')) || 0;
-            return ratingB - ratingA; // Descending: Highest rated first
+            return ratingB - ratingA; 
         } else {
             const indexA = parseInt(a.getAttribute('data-index')) || 0;
             const indexB = parseInt(b.getAttribute('data-index')) || 0;
-            return indexB - indexA; // Descending order (highest index/newest read first)
+            return indexB - indexA; 
         }
     });
 
@@ -81,10 +82,13 @@ window.updateBooks = function() {
 
         const bookMonth = book.getAttribute('data-month');
         const bookYear = book.getAttribute('data-year');
+        const bookGenre = book.getAttribute('data-genre') || "none"; 
+
         const monthMatch = (selectedMonth === "all" || selectedMonth === bookMonth);
         const yearMatch = (selectedYear === "all" || selectedYear === bookYear);
+        const genreMatch = (selectedGenre === "all" || selectedGenre === bookGenre); 
 
-        book.style.display = (monthMatch && yearMatch) ? "" : "none";
+        book.style.display = (monthMatch && yearMatch && genreMatch) ? "" : "none";
     });
 
     // 3. Hide any empty lists
