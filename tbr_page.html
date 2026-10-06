@@ -6,24 +6,40 @@
     <script src="script.js"></script>
 </head>
 <body class="full-tbr-list"> 
-    <nav>
+    <nav class="nav-container">
         <button class="button-class" onclick="pagechange('index')">← Back Home</button>
+        <button class="button-class" onclick="pagechange('recommendations')">Recommendations</button>
     </nav>
 
     <div class="content">
-    <aside class="filter-section">
-        <h3>Filter by Status</h3>
-        <select id="statusFilter" onchange="filterTBR()">
-            <option value="all">Show All</option>
-            <option value="unread">TBR 📖</option>
-            <option value="read">Finished ✅</option>
-        </select>
-    </aside>
+        <aside class="filter-section">
+            <h3>Filter by Status</h3>
+            <select id="statusFilter" onchange="filterTBRBooks()">
+                <option value="all">Show All</option>
+                <option value="unread">TBR 📖</option>
+                <option value="DNF">Did Not Finish</option>
+                <option value="read">Finished ✅</option>
+            </select>
+
+            <h3 style="margin-top: 15px;">Filter by Genre</h3>
+            <select id="genreFilter" onchange="filterTBRBooks()">
+                <option value="all">All Genres</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="fiction">Fiction</option>
+                <option value="non-fiction">Non-Fiction</option>
+                <option value="historical-fiction">Historical Fiction</option>
+                <option value="young-adult">Young Adult</option>
+                <option value="romance">Romance</option>
+                <option value="mystery">Mystery</option>
+                <option value="horror">Horror</option>
+            </select>
+        </aside>
 
     <main class="tbr-section">
         <div id="tbr-list">
             
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="pics/stationary-shop.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Letters from the Ginza Shihodo Stationery Shop</h3>
@@ -35,7 +51,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="young-adult">
                 <img src="pics/sunrise-on-the-reaping.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Sunrise on the Reaping</h3>
@@ -47,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="sci-fi">
                 <img src="pics/1984.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>1984</h3>
@@ -59,7 +75,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="non-fiction">
                 <img src="pics/girl-interrupted.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Girl Interrupted</h3>
@@ -71,7 +87,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="pics/death-of-ivan-ilych.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>The Death of Ivan Ilych</h3>
@@ -83,7 +99,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="pics/cannery-row.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Cannery Row</h3>
@@ -95,7 +111,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="pics/yellow-wallpaper.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>The Yellow Wallpaper</h3>
@@ -107,7 +123,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="pics/the-waves.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>The Waves</h3>
@@ -119,7 +135,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="pics/white-oleander.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>White Oleander</h3>
@@ -131,7 +147,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="historical-fiction">
                 <img src="pics/grapes-of-wrath.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>The Grapes of Wrath</h3>
@@ -143,7 +159,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="mystery">
                 <img src="pics/lheure-zero.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>L'Heure Zéro</h3>
@@ -155,7 +171,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="pics/man.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Mãn</h3>
@@ -167,7 +183,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="historical-fiction">
                 <img src="tbr_page_book_covers/room-with-view.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>A Room with a View</h3>
@@ -179,7 +195,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="young-adult">
                 <img src="pics/anne-of-green-gables.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Anne of Green Gables</h3>
@@ -191,7 +207,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="romance">
                 <img src="pics/seven-days-in-june.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Seven Days in June</h3>
@@ -203,7 +219,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="romance">
                 <img src="tbr_page_book_covers/sunburn.png" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Sunburn</h3>
@@ -215,7 +231,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="romance">
                 <img src="tbr_page_book_covers/giovannis-room.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Giovanni's Room</h3>
@@ -227,7 +243,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="sci-fi">
                 <img src="tbr_page_book_covers/project-hail-mary.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Project Hail Mary</h3>
@@ -239,7 +255,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="tbr_page_book_covers/midnight-library.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>The Midnight Library</h3>
@@ -251,7 +267,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="mystery">
                 <img src="tbr_page_book_covers/good-girl-guide-to-murder.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>A Good Girl's Guide to Murder</h3>
@@ -263,7 +279,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="sci-fi">
                 <img src="tbr_page_book_covers/fahrenheit-451.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Fahrenheit 451</h3>
@@ -275,19 +291,19 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="DNF" data-genre="sci-fi">
                 <img src="tbr_page_book_covers/artemis.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Artemis</h3>
                     <p>Andy Weir</p>
                     <div class="status-row">
-                        <span class="status-badge status-read">Finished ✅</span>
+                        <span class="status-badge status-DNF">DNF</span>
                         <a href="reviews/artemis.html" class="review-link">Read Review</a>
                     </div>
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="tbr_page_book_covers/yellowface.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Yellowface</h3>
@@ -299,7 +315,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="mystery">
                 <img src="tbr_page_book_covers/good-girl-bad-blood.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Good Girl Bad Blood</h3>
@@ -311,7 +327,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="tbr_page_book_covers/flowers-algernon.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Flowers for Algernon</h3>
@@ -323,7 +339,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="tbr_page_book_covers/animal.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Animal</h3>
@@ -335,7 +351,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="tbr_page_book_covers/the-trial.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>The Trial</h3>
@@ -347,7 +363,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="tbr_page_book_covers/five-people-in-heaven.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>The Five People You Meet in Heaven</h3>
@@ -359,7 +375,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="tbr_page_book_covers/for-one-more-day.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>For One More Day</h3>
@@ -371,7 +387,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="mystery">
                 <img src="tbr_page_book_covers/as-good-as-dead.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>As Good As Dead</h3>
@@ -383,7 +399,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="tbr_page_book_covers/pick-a-color.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Pick A Color</h3>
@@ -395,7 +411,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="romance">
                 <img src="tbr_page_book_covers/my-policeman.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>My Policeman</h3>
@@ -407,7 +423,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="horror">
                 <img src="tbr_page_book_covers/tender-is-the-flesh.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Tender is the Flesh</h3>
@@ -419,7 +435,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="non-fiction">
                 <img src="tbr_page_book_covers/all-boys-arent-blue.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>All Boys Aren't Blue</h3>
@@ -431,7 +447,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="non-fiction">
                 <img src="tbr_page_book_covers/everything-is-tuberculosis.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Everything Is Tuberculosis</h3>
@@ -443,7 +459,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="horror">
                 <img src="tbr_page_book_covers/chlorine.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Chlorine</h3>
@@ -455,7 +471,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="tbr_page_book_covers/a-man-called-ove.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>A Man Called Ove</h3>
@@ -467,7 +483,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="tbr_page_book_covers/no-longer-human.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>No Longer Human</h3>
@@ -479,7 +495,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="horror">
                 <img src="tbr_page_book_covers/earthlings.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Earthlings</h3>
@@ -491,7 +507,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="young-adult">
                 <img src="tbr_page_book_covers/turtles-all-the-way-down.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Turtles All The Way Down</h3>
@@ -503,7 +519,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="tbr_page_book_covers/Foster.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Foster</h3>
@@ -515,7 +531,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fiction">
                 <img src="tbr_page_book_covers/the-braid.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>The Braid</h3>
@@ -527,7 +543,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="fantasy">
                 <img src="tbr_page_book_covers/the-capital-of-dreams.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>The Capital of Dreams</h3>
@@ -539,7 +555,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="sci-fi">
                 <img src="tbr_page_book_covers/this-is-how-you-lose-the-time-war.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>This Is How You Lose the Time War</h3>
@@ -551,7 +567,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="read">
+            <div class="tbr-item" data-status="read" data-genre="historical-fiction">
                 <img src="tbr_page_book_covers/small-things-like-these.png" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Small Things Like These</h3>
@@ -563,7 +579,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="unread">
+            <div class="tbr-item" data-status="unread" data-genre="fantasy">
                 <img src="tbr_page_book_covers/legendborn.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Legendborn</h3>
@@ -575,7 +591,7 @@
                 </div>
             </div>
 
-            <div class="tbr-item" data-status="unread">
+            <div class="tbr-item" data-status="unread" data-genre="fiction">
                 <img src="tbr_page_book_covers/dubliners.jpg" alt="Book Cover" class="tbr-cover">
                 <div class="tbr-info">
                     <h3>Dubliners</h3>
