@@ -10,13 +10,12 @@ function pagechange(pagename) {
 
 // Master function for filtering and sorting the main index page
 window.updateBooks = function() {
-    // 1. Grab elements
     const monthFilter = document.getElementById('monthFilter');
     const yearFilter = document.getElementById('yearFilter');
     const sortFilter = document.getElementById('sortFilter');
     const genreFilter = document.getElementById('genreFilter');
     
-    if (!monthFilter || !yearFilter) return;
+    if (!monthFilter) return;
 
     const selectedMonth = monthFilter.value;
     const selectedYear = yearFilter.value;
@@ -28,20 +27,21 @@ window.updateBooks = function() {
     
     if (!mainList) return;
 
-    // 2. Sort the array of books
+    // 1. Sort the array of books mathematically
     books.sort((a, b) => {
         if (sortValue === 'rating') {
             const ratingA = parseFloat(a.getAttribute('data-rating')) || 0;
             const ratingB = parseFloat(b.getAttribute('data-rating')) || 0;
             return ratingB - ratingA; 
         } else {
-            const indexA = parseInt(a.getAttribute('data-index')) || 0;
-            const indexB = parseInt(b.getAttribute('data-index')) || 0;
-            return indexB - indexA; 
+            const indexA = parseInt(a.getAttribute('data-index'), 10) || 0;
+            const indexB = parseInt(b.getAttribute('data-index'), 10) || 0;
+            
+            return indexB - indexA; // Descending: highest index (newest book) first
         }
     });
 
-    // 3. Apply sorting and filtering
+    // 2. Apply sorting and filtering to the master list
     books.forEach(book => {
         mainList.appendChild(book); 
 
@@ -54,14 +54,6 @@ window.updateBooks = function() {
         const genreMatch = (selectedGenre === "all" || selectedGenre === bookGenre); 
 
         book.style.display = (monthMatch && yearMatch && genreMatch) ? "" : "none";
-    });
-
-    // 4. Hide any empty lists
-    document.querySelectorAll('.book-list').forEach(list => {
-        const visibleBooks = Array.from(list.querySelectorAll('.book-container'))
-                                  .filter(book => book.style.display !== "none");
-        
-        list.style.display = visibleBooks.length === 0 ? "none" : "grid";
     });
 }
 
