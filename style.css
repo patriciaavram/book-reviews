@@ -143,7 +143,7 @@ img {
 
 /* Review Page Styles */
 .review-page {
-    background-image: url('pics/review-bg-pic.jpg');
+    background-image: url('review-bg-pic.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -176,7 +176,7 @@ img {
     min-width: 120px;
     display: flex;
     flex-direction: column;
-    background-image: url('pics/review-bg-pic.jpg');
+    background-image: url('review-bg-pic.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -224,7 +224,7 @@ img {
 
 /* Full TBR List Styles */
 .full-tbr-list{
-    background-image: url('pics/review-bg-pic.jpg');
+    background-image: url('review-bg-pic.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
